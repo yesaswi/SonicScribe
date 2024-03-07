@@ -1,2 +1,4 @@
 docs/meeting_minutes_serverless_architecture.png
 .DS_Store
+*.json
+*.pyc

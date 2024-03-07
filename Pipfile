@@ -7,6 +7,8 @@ name = "pypi"
 diagrams = "*"
 openai = "*"
 python-docx = "*"
+functions-framework = "*"
+google-cloud-storage = "*"
 
 [dev-packages]
 
