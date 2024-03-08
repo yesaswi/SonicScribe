@@ -9,3 +9,7 @@ variable "function_bucket_name" {
 variable "region" {
   description = "The GCP region"
 }
+
+variable "project_id" {
+  description = "The GCP project ID"
+}

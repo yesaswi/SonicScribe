@@ -29,3 +29,7 @@ variable "service_account_email" {
 variable "region" {
   description = "The region in which the Cloud Function will be deployed"
 }
+
+variable "project_id" {
+  description = "The GCP project ID"
+}
