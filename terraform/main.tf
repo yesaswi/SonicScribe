@@ -21,12 +21,14 @@ resource "google_service_account" "cloud_function_service_account" {
 
 module "functions" {
   source                = "./modules/functions"
-  function_name         = "upload_audio"
+  function_name         = "upload-audio"
   function_entry_point  = "upload_audio"
+  function_archive_name = "upload_audio.zip"
   function_source_dir   = "../functions/upload_audio"
   function_output_path  = "../upload_audio.zip"
   function_runtime      = "python310"
   function_bucket_name  = module.storage.function_bucket_name
+  audio_bucket_name     = module.storage.audio_bucket_name
   service_account_email = google_service_account.cloud_function_service_account.email
   region                = var.region
   project_id            = var.project_id

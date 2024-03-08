@@ -5,7 +5,7 @@ data "archive_file" "function_source" {
 }
 
 resource "google_storage_bucket_object" "function_archive" {
-  name   = "function-source.zip"
+  name   = var.function_archive_name
   bucket = var.function_bucket_name
   source = data.archive_file.function_source.output_path
 }
@@ -31,5 +31,8 @@ resource "google_cloudfunctions2_function" "function" {
     available_memory    = "256M"
     timeout_seconds     = 60
     service_account_email = var.service_account_email
+    environment_variables = {
+        AUDIO_BUCKET_NAME = var.audio_bucket_name
+    }
   }
 }
