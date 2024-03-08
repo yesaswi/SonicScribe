@@ -30,7 +30,6 @@ jobs:
     env:
       TF_VAR_region: ${{ secrets.GCP_REGION }}
       TF_VAR_project_id: ${{ secrets.GCP_PROJECT_ID }}
-      TF_LOG: trace
       GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/sa_key.json
     defaults:
       run:
