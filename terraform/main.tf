@@ -3,6 +3,7 @@ module "storage" {
   audio_bucket_name   = "sonicscribe-audio-bucket"
   function_bucket_name = "sonicscribe-function-bucket"
   region              = var.region
+  project_id          = var.project_id
 }
 
 module "cloud_function_iam" {
@@ -28,4 +29,5 @@ module "functions" {
   function_bucket_name  = module.storage.function_bucket_name
   service_account_email = google_service_account.cloud_function_service_account.email
   region                = var.region
+  project_id            = var.project_id
 }

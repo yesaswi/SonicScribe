@@ -1,5 +1,5 @@
 output "function_invoker_role" {
-  value       = google_cloudfunctions_function_iam_member.invoker.role
+  value       = google_cloudfunctions2_function_iam_member.invoker.role
   description = "The IAM role for invoking the Cloud Function"
 }
 
