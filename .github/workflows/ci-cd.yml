@@ -51,7 +51,7 @@ jobs:
         run: terraform plan
       - name: Apply Terraform changes
         id: apply
-        run: terraform apply -auto-approve
+        run: terraform apply --auto-approve
         continue-on-error: true
       - name: Cleanup on failure
         if: steps.apply.outcome == 'failure'
