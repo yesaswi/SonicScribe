@@ -22,6 +22,10 @@ variable "function_bucket_name" {
   description = "The name of the Cloud Storage bucket for function source code"
 }
 
+variable "audio_bucket_name" {
+  description = "The name of the Cloud Storage bucket for audio files"
+}
+
 variable "service_account_email" {
   description = "The email of the service account used by the Cloud Function"
 }
@@ -32,4 +36,8 @@ variable "region" {
 
 variable "project_id" {
   description = "The GCP project ID"
+}
+
+variable "function_archive_name" {
+  description = "The name of the Cloud Function source archive"
 }
